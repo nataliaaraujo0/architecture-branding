@@ -14,19 +14,37 @@
     <title>Architecture Branding</title>
   </head>
   <body>
-
-    <div class="header">
-      <p>Reference</p>
-    </div>
+    <div class="cursor"></div>
 
     <div class="container">
       <div class="content">
-        <strong>Architecture</strong>
-        <h1>Websites Apps Branding</h1>
-        <p>This project was made to train Javascript studies. 
-          Here, event concepts were discussed.
-          </p>
+        <strong>Cursor</strong>
+        <img src="./img/cursor.png" alt="" />
+        <h1>website for training cursor animations</h1>
+        <p>
+          This project was created to put into practice CSS and Javascript
+          studies. Click anywhere on the screen and see what happens!
+        </p>
       </div>
     </div>
+
+    <script>
+      const cursor = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", e => {
+        cursor.setAttribute(
+          "style",
+          "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+        );
+      });
+
+      document.addEventListener("click", () => {
+        cursor.classList.add("expand");
+
+        setTimeout(() => {
+          cursor.classList.remove("expand");
+        }, 500);
+      });
+    </script>
   </body>
 </html>
