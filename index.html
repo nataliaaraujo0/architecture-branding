@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Architecture Branding</title>
+    <title>Cursor animation</title>
   </head>
   <body>
     <div class="cursor"></div>
@@ -28,23 +28,6 @@
       </div>
     </div>
 
-    <script>
-      const cursor = document.querySelector(".cursor");
-
-      document.addEventListener("mousemove", e => {
-        cursor.setAttribute(
-          "style",
-          "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-        );
-      });
-
-      document.addEventListener("click", () => {
-        cursor.classList.add("expand");
-
-        setTimeout(() => {
-          cursor.classList.remove("expand");
-        }, 500);
-      });
-    </script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
